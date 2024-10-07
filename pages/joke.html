@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Cracking Website</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        #joke {
+            font-size: 24px;
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #ffcc00;
+            border-radius: 10px;
+            background-color: #fff;
+            width: 60%;
+            max-width: 600px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Joke Cracking Website!</h1>
+    <div id="joke">Click the button to see a joke!</div>
+    <button onclick="generateJoke()">Tell Me a Joke!</button>
+
+    <script>
+        const jokes = [
+            "Why don't scientists trust atoms? Because they make up everything!",
+            "Why did the scarecrow win an award? Because he was outstanding in his field!",
+            "What do you call fake spaghetti? An impasta!",
+            "Why did the bicycle fall over? Because it was two-tired!",
+            "What do you get if you cross a snowman and a vampire? Frostbite!",
+            "Why don't skeletons fight each other? They don't have the guts!",
+            "What do you call cheese that isn't yours? Nacho cheese!",
+            "Why did the math book look sad? Because it had too many problems!",
+            "What do you call a bear with no teeth? A gummy bear!",
+            "How does a penguin build its house? Igloos it together!"
+        ];
+
+        function generateJoke() {
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            document.getElementById('joke').innerText = jokes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
